@@ -28,21 +28,21 @@ public final class CartItem extends Entity implements ICartItem {
 
     @Override
     public UUID getCartId() {
-        return null;
+        return cartId;
     }
 
     @Override
     public void setCartId(UUID cartId) {
-
+        this.cartId = cartId;
     }
 
     @Override
     public Integer getQuantity() {
-        return 0;
+        return quantity;
     }
 
     @Override
     public void setQuantity(Integer quantity) {
-
+        this.quantity = quantity;
     }
 }

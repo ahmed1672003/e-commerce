@@ -31,10 +31,10 @@ public class CustomerService implements ICustomerService {
             if (product == null) {
                 continue;
             }
-            product.setQuantity(product.getQuantity() - cartItem.getQuantity());
             QuantityUnAvailableException.ThrowIfQuantityUnAvailable(cartItem, product.getQuantity());
             ProductExpiredException.ThrowIfProductExpired(product);
             subTotalPrice += product.getPrice() * cartItem.getQuantity();
+            product.setQuantity(product.getQuantity() - cartItem.getQuantity());
         }
 
         IOrder order = new Order(customer.getId(), 500d, 0d, "Maadi, Cairo");

@@ -41,7 +41,7 @@ public class DummyData {
             add(new CartItem(flour.getId(), cart.getId(), 1));
             add(new CartItem(yogurt.getId(), cart.getId(), 20));
             add(new CartItem(scratchCard.getId(), cart.getId(), 1));
-            add(new CartItem(tv.getId(), cart.getId(), 100));
+            add(new CartItem(tv.getId(), cart.getId(), 7));
         }});
     }
 }
