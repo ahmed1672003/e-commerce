@@ -7,7 +7,7 @@ public class CartIsEmptyException extends CartException {
         super(message);
     }
 
-    public static void ThrowIfCartIsEmpty(ICart cart) throws CartException {
+    public static void ThrowIfCartIsEmpty(ICart cart) {
 
         if (cart.getCartItems().isEmpty()) {
             throw new CartIsEmptyException("Can't checkout , please add products to your cart first.");

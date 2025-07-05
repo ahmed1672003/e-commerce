@@ -8,7 +8,7 @@ public class CustomerBalanceIsInsufficientException extends OrderException {
         super(message);
     }
 
-    public static void ThrowIfBalanceIsInsufficient(ICustomer customer, IOrder order) throws OrderException {
+    public static void ThrowIfBalanceIsInsufficient(ICustomer customer, IOrder order) {
 
         var customerBalance = customer.getBalance();
         var totalPrice = order.getTotalPrice();

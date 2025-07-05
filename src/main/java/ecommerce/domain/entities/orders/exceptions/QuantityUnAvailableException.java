@@ -7,7 +7,7 @@ public class QuantityUnAvailableException extends OrderException {
         super(message);
     }
 
-    public static void ThrowIfQuantityUnAvailable(ICartItem cartItem, Integer availabelQuantity) throws OrderException {
+    public static void ThrowIfQuantityUnAvailable(ICartItem cartItem, Integer availabelQuantity) {
         if (cartItem.getQuantity() > availabelQuantity) {
             throw new QuantityUnAvailableException("Quantity is greater than " + availabelQuantity);
         }

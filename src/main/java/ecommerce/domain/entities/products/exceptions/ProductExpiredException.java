@@ -8,7 +8,7 @@ public class ProductExpiredException extends ProductException {
         super(message);
     }
 
-    public static void ThrowIfProductExpired(IProduct product) throws ProductException {
+    public static void ThrowIfProductExpired(IProduct product)  {
         if (product instanceof IExpireableProduct expireableProduct) {
             if (expireableProduct.isExpired()) {
                 throw new ProductExpiredException("Product expired.");

@@ -21,7 +21,7 @@ public class CustomerService implements ICustomerService {
     private IShippingService shippingService = new ShippingService();
 
     @Override
-    public void checkout(ICustomer customer) throws OrderException, CartException, ProductException {
+    public void checkout(ICustomer customer) {
         var cart = customer.getCart();
         CartIsEmptyException.ThrowIfCartIsEmpty(cart);
         var cartItems = cart.getCartItems();

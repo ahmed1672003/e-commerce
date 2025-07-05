@@ -8,7 +8,7 @@ import ecommerce.services.customers.CustomerService;
 import ecommerce.services.customers.ICustomerService;
 
 public class Main {
-    public static void main(String[] args) throws OrderException, CartException, ProductException {
+    public static void main(String[] args)  {
         DummyData.SeedCustomerCartItems();
         ICustomerService customerService = new CustomerService();
         customerService.checkout(DummyData.customer);
